@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Ayça & Enes Nişan Davetiyesi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background: linear-gradient(to bottom, #fffbea, #fff);
+      color: #3e3e3e;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    .container {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      color: #b98d57;
+    }
+
+    h2 {
+      font-size: 1.5em;
+      color: #776655;
+      margin-bottom: 30px;
+    }
+
+    .date {
+      font-size: 1.4em;
+      color: #5a4e3c;
+      margin: 20px 0;
+    }
+
+    .note {
+      font-style: italic;
+      color: #7a6440;
+      margin: 30px auto;
+      max-width: 600px;
+      font-size: 1.2em;
+    }
+
+    .address {
+      background: #fff6e8;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 20px;
+      font-size: 1em;
+      color: #5a4e3c;
+      line-height: 1.6;
+      box-shadow: 0 0 10px rgba(200, 170, 130, 0.2);
+    }
+
+    .countdown {
+      margin-top: 40px;
+      font-size: 1.4em;
+      color: #b07740;
+      font-weight: bold;
+    }
+
+    .flower {
+      width: 80px;
+      margin: 10px auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="https://cdn-icons-png.flaticon.com/512/10836/10836343.png" alt="çiçek" class="flower" />
+    <h1>Ayça & Enes</h1>
+    <h2>Nişanımıza davetlisiniz!</h2>
+
+    <p class="date">25 Mayıs 2025 Pazar Saat:14:00</p>
+
+    <p class="note">Bu özel günde sizinle olmak her şeyi güzelleştirir...</p>
+
+    <div class="address">
+      <strong>Adres:</strong><br>
+      MEVA HOUSE, Oran<br>
+      Samanyolu AVM 3.Durak, Oran<br>
+      Mevlana Blv. & Konya Yolu Yanyolu No:451<br>
+      06450 Gölbaşı / Çankaya
+    </div>
+
+    <div class="countdown" id="countdown">Geri sayım yükleniyor...</div>
+  </div>
+
+  <script>
+    const countdownElement = document.getElementById('countdown');
+    const targetDate = new Date("2025-05-25T18:00:00").getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance < 0) {
+        countdownElement.innerHTML = "Bugün nişan günü! 🎉";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdownElement.innerHTML = `Nişanımıza kalan süre: ${days} gün, ${hours} saat, ${minutes} dakika, ${seconds} saniye`;
+    }
+
+body {
+  background: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+  background-color: #fffbea;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #3e3e3e;
+}
+
+  <audio autoplay loop>
+  <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
+</audio>
+
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
